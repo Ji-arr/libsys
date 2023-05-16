@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  #navbar-expand {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    padding: 10px 5%;
+    z-index: 2;
+  }
+  .sidebar {
+    position: fixed;
+    margin-top: 60px !important;
+    left: 0px;
+    width: 200px;
+    height: 100vh;
+    background: #111;
+    transition: all 300ms linear;
+  }
+  .container .sidebar { /*important */
+    margin-top: 50px !important;
+  }
+  .content-area {   
+  position: absolute; 
+  margin-top: 45px;
+  left: 0px;
+  right: 0px;
+  height: 500px;
+  margin-top: 100px;
+  transition: all 300ms linear;
+  }
+  .nav .toggle-btn {
+    position: relative;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    top: 0px;
+  }
+  .nav .toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateY(-50%);
+    transition: all 300ms ease-in-out;
+  }
+  .nav .toggle-btn span:nth-child(1){
+    top:10%;
+  }
+  .nav .toggle-btn span:nth-child(2){
+    top:50%;
+  }
+  .nav .toggle-btn span:nth-child(3){
+    top:90%;
+  }
+  .sidebar .links a{
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .sidebar .links a.active,
+  .sidebar .links a:hover {
+    background: rgb(140, 16, 212);
+    color:rgb(11, 206, 255);
+  }
+  .content-area.active{
+    left: 200px;
+    transition: all 300ms linear;
+  }
+  .sidebar.active {    /*important */
+    left:-200px;
+    transition: all 300ms linear;
+  }
+
+  .nav.close .toggle-btn span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .nav.close .toggle-btn span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .nav.close .toggle-btn span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
